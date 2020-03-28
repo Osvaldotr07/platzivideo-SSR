@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../componets/Header'
-import '../assets/style/App.scss'
+import '../assets/style/Home.scss'
 import Search from '../componets/Search'
 import Category from '../componets/Category'
 import Carousel from '../componets/Carousel'
@@ -10,11 +10,10 @@ import useInitialState from '../Hooks/useInitialState'
 
 const API = 'http://localhost:3000/initalState'
 
-const App = () => {
+const Home = () => {
     const initialState = useInitialState(API)
     return (
         <React.Fragment>
-            <Header />
             <Search />
             {initialState.mylist?.length > 0 && 
                 <Category title="Mi lista">
@@ -40,8 +39,7 @@ const App = () => {
                 )}
                 </Carousel>
             </Category>
-            <Footer />
         </React.Fragment>
     )}
 
-export default App
+export default Home
