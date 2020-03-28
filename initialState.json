@@ -1,6 +1,59 @@
 {
     "initalState": {
-      "mylist": [],
+      "mylist": [
+        {
+          "id": 2,
+          "slug": "tvshow-2",
+          "title": "In the Dark",
+          "type": "Scripted",
+          "language": "English",
+          "year": 2009,
+          "contentRating": "16+",
+          "duration": 164,
+          "cover": "http://dummyimage.com/800x600.png/99118E/ffffff",
+          "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+          "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+        },
+        {
+          "id": 3,
+          "slug": "tvshow-3",
+          "title": "Instinct",
+          "type": "Adventure",
+          "language": "English",
+          "year": 2002,
+          "contentRating": "16+",
+          "duration": 137,
+          "cover": "http://dummyimage.com/800x600.png/302140/ffffff",
+          "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+          "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+        },
+        {
+          "id": 8,
+          "slug": "tvshow-8",
+          "title": "Stargate Atlantis",
+          "type": "Action",
+          "language": "English",
+          "year": 2012,
+          "contentRating": "16+",
+          "duration": 148,
+          "cover": "http://dummyimage.com/800x600.png/306880/ffffff",
+          "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+          "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+        },
+        {
+          "id": 9,
+          "slug": "tvshow-9",
+          "title": "Alien Highway",
+          "type": "Action",
+          "language": "English",
+          "year": 2019,
+          "contentRating": "16+",
+          "duration": 128,
+          "cover": "http://dummyimage.com/800x600.png/604180/ffffff",
+          "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+          "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+        }
+      ],
       "trends": [
         {
           "id": 2,
