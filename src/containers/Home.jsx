@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../componets/Header'
+import React from 'react'
+import { connect } from 'react-redux'
 import '../assets/style/Home.scss'
 import Search from '../componets/Search'
 import Category from '../componets/Category'
 import Carousel from '../componets/Carousel'
 import CarouselItem from '../componets/CarouselItem'
-import Footer from '../componets/Footer'
+
 import useInitialState from '../Hooks/useInitialState'
 
-const API = 'http://localhost:3000/initalState'
+// const API = 'http://localhost:3000/initalState'
 
-const Home = () => {
-    const initialState = useInitialState(API)
+const Home = ({myList, trends, originals}) => {
+    // const initialState = useInitialState(API)
     return (
         <React.Fragment>
             <Search />
-            {initialState.mylist?.length > 0 && 
+            {myList?.length > 0 && 
                 <Category title="Mi lista">
                     <Carousel>
-                    {initialState.mylist?.map(item => 
-                        <CarouselItem key={item.id} {...item} />
+                    {myList?.map(item => 
+                        <CarouselItem 
+                        key={item.id} 
+                        {...item}
+                        isList />
                     )}
                     </Carousel>
                 </Category>
@@ -27,14 +30,14 @@ const Home = () => {
             
             <Category title="Trends de platzi video">
                 <Carousel>
-                {initialState.trends?.map(item => 
+                {trends?.map(item => 
                     <CarouselItem key={item.id} {...item}/>
                 )}
                 </Carousel>
             </Category>
             <Category title="Originals de platzi video">
                 <Carousel>
-                {initialState.originals?.map(item => 
+                {originals?.map(item => 
                     <CarouselItem key={item.id} {...item}/>
                 )}
                 </Carousel>
@@ -42,4 +45,12 @@ const Home = () => {
         </React.Fragment>
     )}
 
-export default Home
+const mapStateToProps = state => {
+    return {
+        myList: state.myList,
+        trends: state.trends,
+        originals: state.originals
+    }
+    
+}
+export default connect(mapStateToProps, null)(Home)
