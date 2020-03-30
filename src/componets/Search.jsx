@@ -40,4 +40,4 @@ const mapDispatchToProps = {
     searchRequest,
 }
 
-export default connect(null, mapDispatchToProps)(Search)
+export default connect(null, mapDispatchToProps)(Search);
