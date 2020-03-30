@@ -1,4 +1,4 @@
-header {
+.header {
     align-items: center;
     background: #8f57fd;
     color: white;
@@ -53,4 +53,6 @@ header {
 .header__menu--profile img {
     margin-right: 8px;
     width: 40px;
+    border-radius: 100%;
+    object-fit: cover;
 }

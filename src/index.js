@@ -2,11 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './routes/App'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, compose } from 'redux'
 import reducer from './reducers/'
 
 const initialState = {
     "user": {},
+    "searched": {},
     "playing":{},
         "myList": [
         {
@@ -226,7 +227,9 @@ const initialState = {
       
 }
 
-const store = createStore(reducer, initialState)
+const composeEnhencer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+const store = createStore(reducer, initialState, composeEnhencer())
 
 
 ReactDOM.render(
